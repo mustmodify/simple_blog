@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Uniform Reporting API"
+---
+
+Many projects want reports. I find myself writing many different variations on the same theme in
+different projects. I feel like there's enough similarity within all this that 80% of all reports
+could fit within an existing API. That would lead to more reusable code for sorting, filtering... 
+
+So here's what I've seen.
+
+Any uniform reporting API would need:
+* Conditions / Filters
+  * available fields
+    * value format (date, text, integer, ...)
+    * options (if enumerable)
+    * date / integer limits (not after today. Numbers between 0 and 10) [optional]
+    
+* Sorting
+  * Which fields can be sorted.
+  * Which ones are currently sorted
+  * multiple sort fields?.... not sure that's even a good idea. [optional and very advanced]
+  
+* Pagination
+  * server-side or client-side
+  
+In the past I've used the Datatables api because it already a UI. Their API is unfortunate but I was willing to 
+live with it. But now that a client is asking for a uniform set of reports, it seems like this is the time 
+to look around.
